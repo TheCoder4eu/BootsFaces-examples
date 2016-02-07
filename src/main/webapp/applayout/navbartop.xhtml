@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:b="http://bootsfaces.net/ui">
+
+  <ui:remove>
+    <!--
+	    	Hint to editors: The menus follow the Chicago style of capitalization. Please capitalize everything but the "smaller" words. 
+	     -->
+  </ui:remove>
+    <b:navBar brand="BootsFaces"
+              brandHref="http://www.bootsfaces.net/" inverse="true"
+              fixed="top">
+        <b:container>
+            <b:navbarLinks>
+                <b:navLink />
+                <b:navLink />
+                <b:navbarLinks>
+                    <b:navLink outcome="index" value="Home" iconAwesome="home" />
+                </b:navbarLinks>
+                <b:dropMenu value="Examples">
+                    <b:navLink value="Starter Template" outcome="/starter_template" icon="play-circle" />
+                    <b:navLink value="Grid" outcome="/grid" icon="play-circle" />
+                    <b:navLink value="Jumbotron" outcome="/jumbotron" icon="play-circle" />
+                    <b:navLink value="Navbar" outcome="/navbar" icon="play-circle" />
+                    <b:navLink value="Static Top navbar" outcome="/navbar-static-top" icon="play-circle" />
+                    <b:navLink value="Fixed Top navbar" outcome="/navbar-fixed-top" icon="play-circle" />
+                    <b:navLink value="Dashboard" outcome="/dashboard" icon="play-circle" />
+                    <b:navLink value="Sign in" outcome="/signin" icon="play-circle" />
+                    <b:navLink value="Theme" outcome="/theme" icon="play-circle" />
+                </b:dropMenu>
+            </b:navbarLinks>
+
+            <b:navbarLinks pull="right">
+                <b:navLink href="http://showcase.bootsfaces.net/" value="Showcase" iconAwesome="desktop" />
+            </b:navbarLinks>
+        </b:container>
+    </b:navBar>
+
+</ui:fragment>

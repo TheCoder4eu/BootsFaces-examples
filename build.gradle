@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    // You may define additional repositories, or even remove "mavenCentral()".
+    // Read more about repositories here:
+    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:repositories
+}
+
+dependencies {
+    // TODO: Add dependencies here ...
+    // You can read more about how to add dependency here:
+    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
+    //testCompile group: 'junit', name: 'junit', version: '4.10'
+    providedCompile 'javax.enterprise:cdi-api:1.2'
+    providedCompile 'javax.servlet:servlet-api:3.+'
+    providedCompile 'com.sun.faces:jsf-api:2.2.+'
+    providedCompile 'com.sun.faces:jsf-impl:2.2.+'
+    providedCompile 'org.glassfish.web:el-impl:2.2'
+    providedCompile 'javax.validation:validation-api:1.0.0.GA'
+}
+war {
+   archiveName = 'Examples.war'
+   classpath fileTree(dir: 'bsflib', include: '*') // adds a file-set to the WEB-INF/lib dir.
+}
