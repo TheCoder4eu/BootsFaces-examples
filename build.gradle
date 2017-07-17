@@ -6,6 +6,7 @@ targetCompatibility = '1.8'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 repositories {
+    mavenLocal()
     mavenCentral()
     // You may define additional repositories, or even remove "mavenCentral()".
     // Read more about repositories here:
@@ -23,6 +24,8 @@ dependencies {
     providedCompile 'com.sun.faces:jsf-impl:2.2.+'
     providedCompile 'org.glassfish.web:el-impl:2.2'
     providedCompile 'javax.validation:validation-api:1.0.0.GA'
+
+    compile "net.bootsfaces:bootsfaces:1.1.2"
 }
 war {
    archiveName = 'Examples.war'
