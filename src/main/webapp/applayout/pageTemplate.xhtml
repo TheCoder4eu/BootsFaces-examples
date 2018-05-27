@@ -27,10 +27,32 @@
         <!--h:outputStylesheet library="customthemes" name="#{theme.customTheme}/bootstrap.min.css"  rendered="#{theme.customTheme ne ''}"/>
         <h:outputStylesheet library="customthemes" name="#{theme.customTheme}/#{theme.customTheme}.css" rendered="#{theme.customTheme ne ''}"/-->
         <style>.tooltip-inner {
-    max-width: 350px;
-    /* If max-width does not work, try using width instead */
-    width: 350px; 
-}</style>
+            max-width: 350px;
+            /* If max-width does not work, try using width instead */
+            width: 350px; 
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+        <script>
+        window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#1d8a8a"
+            },
+            "button": {
+              "background": "#f5d948"
+            }
+          },
+          "theme": "classic",
+          "content": {
+          "message": "This site uses cookies to ensure you get the best browsing experience and perform analytics. Clicking Accept Cookies indicates you agree to the use of cookies on your device.",
+          "dismiss": "Accept Cookies",
+          "href": "https://showcase.bootsfaces.net/privacy.jsf"
+          }
+        })});
+        </script>
     </h:head>
     <h:body style="padding-top: 85px;padding-bottom: 85px;" addLabels="false" addMessages="false">
         
