@@ -20,17 +20,24 @@ dependencies {
     // TODO: Add dependencies here ...
     // You can read more about how to add dependency here:
     //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
+    // CAUTION:
+    // Old java plugin configurations compile,testCompile,providedCompile were Deprecated!
+    // They have been removed and superseded by implementation in Gradle 7.0+. 
+    // see https://docs.gradle.org/6.8.3/userguide/java_plugin.html
     //testCompile group: 'junit', name: 'junit', version: '4.10'
-    providedCompile 'javax.enterprise:cdi-api:1.2'
-    providedCompile 'javax.servlet:servlet-api:3.+'
-    providedCompile 'com.sun.faces:jsf-api:2.2.+'
-    providedCompile 'com.sun.faces:jsf-impl:2.2.+'
-    providedCompile 'org.glassfish.web:el-impl:2.2'
-    providedCompile 'javax.validation:validation-api:1.0.0.GA'
+    //providedCompile 'javax.enterprise:cdi-api:1.2'
+    implementation 'javax.enterprise:cdi-api:1.2'
+    implementation 'javax.servlet:servlet-api:3.+'
+    implementation 'com.sun.faces:jsf-api:2.2.+'
+    implementation 'com.sun.faces:jsf-impl:2.2.+'
+    implementation 'org.glassfish.web:el-impl:2.2'
+    implementation 'javax.validation:validation-api:1.0.0.GA'
 
-    compile "net.bootsfaces:bootsfaces:${BootsFacesVersion}" //1.5.0-SNAPSHOT"
+    implementation "net.bootsfaces:bootsfaces:${BootsFacesVersion}" 
+    //compile "net.bootsfaces:bootsfaces:${BootsFacesVersion}" //1.5.0-SNAPSHOT"
 }
 war {
-   archiveName = 'Examples.war'
+   archiveFileName = 'Examples.war'
+   //archiveName = 'Examples.war' // Removed in Gradle 7.0+
    //classpath fileTree(dir: 'bsflib', include: '*') // adds a file-set to the WEB-INF/lib dir.
 }
