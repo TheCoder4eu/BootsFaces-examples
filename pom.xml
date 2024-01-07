@@ -5,22 +5,23 @@
 
     <groupId>net.bootsfaces</groupId>
     <artifactId>bsfexamples</artifactId>
-    <version>1.6.0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>BootsFaces Examples bootable jar</name>
 
     <properties>
-        <version.bootable.jar>2.0.1.Final</version.bootable.jar>
-        <version.wildfly>21.0.0.Final</version.wildfly>
+        <version.bootable.jar>10.0.0.Final</version.bootable.jar>
+        <version.wildfly>30.0.1.Final</version.wildfly>
         <plugin.fork.embedded>true</plugin.fork.embedded>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-        <version.microprofile.bom>${version.wildfly}</version.microprofile.bom>
-        <version.server.bom>${version.wildfly}</version.server.bom>
+	<failOnMissingWebXml>false</failOnMissingWebXml>
+	<version.org.jboss.shrinkwrap.shrinkwrap>1.2.6</version.org.jboss.shrinkwrap.shrinkwrap>
+        <!-- version.microprofile.bom>${version.wildfly}</version.microprofile.bom>
+        <version.server.bom>${version.wildfly}</version.server.bom -->
     </properties>
 
     <dependencyManagement>
@@ -28,18 +29,31 @@
             <dependency>
                 <groupId>jakarta.platform</groupId>
                 <artifactId>jakarta.jakartaee-api</artifactId>
-                <version>8.0.0</version>
+                <version>10.0.0</version>
                 <scope>provided</scope>
-            </dependency>
+	    </dependency>
 
-            <!-- importing the jakartaee8-with-tools BOM adds specs and other useful artifacts as managed dependencies -->
+	    <dependency>
+                <groupId>org.jboss.shrinkwrap</groupId>
+                <artifactId>shrinkwrap-api</artifactId>
+                <version>${version.org.jboss.shrinkwrap.shrinkwrap}</version>
+	    </dependency>
+
+            <dependency>
+                <groupId>org.jboss.shrinkwrap</groupId>
+                <artifactId>shrinkwrap-impl-base</artifactId>
+                <version>${version.org.jboss.shrinkwrap.shrinkwrap}</version>
+	    </dependency>
+
+
+            <!-- OBSOLETE importing the jakartaee8-with-tools BOM adds specs and other useful artifacts as managed dependencies 
             <dependency>
                 <groupId>org.wildfly.bom</groupId>
-                <artifactId>wildfly-jakartaee8</artifactId>
+                <artifactId>wildfly-jakartaee10</artifactId>
                 <version>${version.server.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
+	    </dependency> -->
         </dependencies>
     </dependencyManagement>
 
@@ -47,7 +61,7 @@
         <dependency>
                 <groupId>net.bootsfaces</groupId>
                 <artifactId>bootsfaces</artifactId>
-                <version>1.5.0</version>
+                <version>2.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>jakarta.platform</groupId>

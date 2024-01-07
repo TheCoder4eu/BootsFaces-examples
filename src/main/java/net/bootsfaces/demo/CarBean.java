@@ -18,15 +18,15 @@
 package net.bootsfaces.demo;
 
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 
 /** A simple bean for demo purposes. */
 @RequestScoped
-@ManagedBean
+ @Named
 public class CarBean implements Serializable {
 	@NotNull
 	private String brand=null;

@@ -6,15 +6,15 @@ package net.bootsfaces.demo;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.faces.event.ActionEvent;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.event.ActionEvent;
 
 /**
  *
  * @author TheCoder4eu
  */
-@ManagedBean
+ @Named
 @SessionScoped
 public class TestBean implements Serializable {
 	private static final long serialVersionUID = -332002335165889800L;

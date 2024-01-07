@@ -2,10 +2,10 @@ package net.bootsfaces.themes;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.SessionScoped;
 
-@ManagedBean
+ @Named
 @SessionScoped
 public class Theme implements Serializable {
 	private static final long serialVersionUID = 1L;

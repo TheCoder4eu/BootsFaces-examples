@@ -6,14 +6,14 @@ package net.bootsfaces.demo;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 
 /**
  *
  * @author TheCoder4eu
  */
-@ManagedBean
+ @Named
 @RequestScoped
 public class DateBean implements Serializable {
 	private static final long serialVersionUID = -7642332089180105956L;

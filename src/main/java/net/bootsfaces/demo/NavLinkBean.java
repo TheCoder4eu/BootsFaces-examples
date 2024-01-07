@@ -2,11 +2,11 @@ package net.bootsfaces.demo;
 
 import java.io.Serializable;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 
 @ViewScoped
-@ManagedBean
+ @Named
 public class NavLinkBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 

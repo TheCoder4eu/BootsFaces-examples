@@ -1,16 +1,16 @@
 package net.bootsfaces.demo;
 
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
-import javax.faces.model.ArrayDataModel;
-import javax.faces.model.DataModel;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.faces.model.ArrayDataModel;
+import jakarta.faces.model.DataModel;
 
 /**
  * Data Model Bean for Items
  * @author Thecoder4.eu
  */
-@ManagedBean
+ @Named
 @RequestScoped
 public class ItemBean implements Serializable {
     
