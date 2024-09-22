@@ -23,7 +23,7 @@ plugins {
 }
 
 // BootsFaces Library Version to use in the Build
-ext.BootsFacesVersion = '2.0.0-SNAPSHOT'
+ext.BootsFacesVersion = '2.0.1'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 java {
